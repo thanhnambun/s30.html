@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(a) {
+            let x = []
+            let y = []
+            let z = []
+            let result=[]
+
+            for (let i = 0; i < a.length; i++) {
+                let char = a.charAt(i)
+                if(char.match(/[a-z]/i)){
+                    x.push(char)
+                }else if (char.match(/[0-9]/)) {
+                    y.push(char)
+                }else{
+                    z.push(char)
+                }
+            }
+        result =result.concat(x,y,z)
+        }
+        let input = prompt("Nhập vào một chuỗi bất kỳ:");
+        let output = check(input);
+        console.log(output);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let d = prompt("nhap mot chuoi")
+        function x(str) {
+            let words = str.split(" ");
+            let a = words.map(word => {
+                return  word.slice(0, -1) + word.slice(-1).toUpperCase();
+            });
+            return a.join(" ");
+        }
+        let v=x(d)
+        console.log(v);
+    </script>
+</body>
+</html>

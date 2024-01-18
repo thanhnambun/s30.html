@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [2, 4, 6, 8, 10];
+        const targetSum = 15;
+        function findSmallestSubarray(arr, target) {
+            let minLength = Infinity;
+            let subarray = [];
+            for (let start = 0; start < arr.length; start++) {
+                let sum = 0;
+                for (let end = start; end < arr.length; end++) {
+                sum += arr[end];
+                if (sum > target && end - start + 1 < minLength) {
+                    minLength = end - start + 1;
+                    subarray = arr.slice(start, end + 1);
+                }
+                }
+            }
+            return subarray;
+        }
+        const result = findSmallestSubarray(numbers, targetSum);
+        console.log(result);
+        
+    </script>
+</body>
+</html>
